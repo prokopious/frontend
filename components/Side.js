@@ -30,9 +30,10 @@ const NavIcon = styled(Link)`
 
 const SidebarNav = styled.nav`
 @media (min-width: 1024px) {
-    padding-top: 50px;
+    padding-top: 40px;
   }
   background: #f4b6c2;
+padding-top: 20px;
   width: auto;
   grid-row: 2;
   grid-column: 1;

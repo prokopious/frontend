@@ -12,12 +12,12 @@ const Bod = styled.div`
 
 
   @media (max-width: 1024px) {
-    background: white;
+    background: #eee3e7;
     display: grid;
     margin:0;
-
+    padding-top: 0;
     grid-template-rows: 1fr 9fr;
-    grid-template-columns: ${({ isOpen }) => (isOpen ? '8fr 2fr' : '0px auto')};
+    grid-template-columns: ${({ isOpen }) => (isOpen ? '60% auto' : '0px auto')};
   }
 `;
 
