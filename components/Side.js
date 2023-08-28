@@ -45,8 +45,8 @@ padding-top: 21px;
   justify-content: center;
   position: relative;
   top: 0;
-//   left: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
-  transition: 350ms;
+  // left: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
+  // transition: 350ms;
   z-index: 10;
 `;
 

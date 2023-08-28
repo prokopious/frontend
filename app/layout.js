@@ -3,6 +3,7 @@ import client from '../client'
 import { Inter } from 'next/font/google'
 import Nav from '../components/Header'
 import Body from '../components/Body'
+import StyledComponentsRegistry from '../lib/registry'
 import Content from '../components/Content'
 import Side from '../components/Side'
 import { BarContextProvider } from '../context/bar'
@@ -36,17 +37,19 @@ export default async function RootLayout({
       <body>
 
         <BarContextProvider>
-          <Body>
-            <div className="header">
-              <Nav />
-            </div>
-            <Content>
-              <main>{children}</main>
-            </Content>
-            <div className="sidebar">
-              <Side data={data} />
-            </div>
-          </Body>
+          <StyledComponentsRegistry>
+            <Body>
+              <div className="header">
+                <Nav />
+              </div>
+              <Content>
+                <main>{children}</main>
+              </Content>
+              <div className="sidebar">
+                <Side data={data} />
+              </div>
+            </Body>
+          </StyledComponentsRegistry>
         </BarContextProvider>
 
       </body>

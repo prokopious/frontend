@@ -8,7 +8,7 @@ const Bod = styled.div`
     display: grid;
     margin:0;
     grid-template-rows: 1fr 9fr;
-    grid-template-columns: 250px auto;
+    grid-template-columns: 300px auto;
 }
 
   @media (max-width: 1024px) {
