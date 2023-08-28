@@ -1,0 +1,105 @@
+@import url(https://db.onlinewebfonts.com/c/382d90421b8a09d016d91b6c39277ff0?family=Anime+Ace);
+@import url(https://db.onlinewebfonts.com/c/5673da52c98bb6cb33ada5aaf649703e?family=Roboto+Regular+V1);
+
+.flex {
+  display: flex;
+  height: 100%;
+  padding: 0.75rem;
+  flex-wrap: wrap;
+  font-family: "Roboto Regular V1";
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #faebd7;
+}
+
+.link1 {
+  display: inline-flex;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  align-items: center;
+  text-decoration: none;
+}
+
+.list2 {
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.name {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  color: #367ECA;
+  text-transform: uppercase;
+}
+
+.burger {
+  display: inline-flex;
+  padding: 0.75rem;
+  outline-style: none;
+  color: #367ECA;
+  text-decoration: none;
+  border: transparent;
+  background-color: transparent;
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.sv2 {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.list {
+  width: 100%;
+
+  @media (min-width: 1024px) {
+
+    flex-grow: 1;
+    width: auto;
+  }
+}
+
+.stuff {
+  justify-content: flex-end;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  text-decoration: none;
+
+  @media (min-width: 1024px) {
+
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    height: auto;
+  }
+}
+
+.l {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  justify-content: center;
+  text-decoration: none;
+  align-items: center;
+  width: 100%;
+  font-size: calc(16px + .1vw);
+  font-weight: 700;
+  color: #367ECA;
+
+  @media (min-width: 1024px) {
+    display: inline-flex;
+    width: auto;
+  }
+}

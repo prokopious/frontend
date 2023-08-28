@@ -1,0 +1,122 @@
+@import url(https://db.onlinewebfonts.com/c/382d90421b8a09d016d91b6c39277ff0?family=Anime+Ace);
+@import url(https://db.onlinewebfonts.com/c/5673da52c98bb6cb33ada5aaf649703e?family=Roboto+Regular+V1);
+
+
+  /* .bar {
+    font-family: "Roboto Regular V1";
+    background-color: #fdf5e6;
+    color: rgb(0, 0, 0);
+    height: 100%;
+  }
+
+  .menu {
+    padding-top: 30px;
+    padding-left: 10px;
+    text-decoration: none;
+  }
+
+  .menuitem {
+    text-decoration: none;
+  } */
+.nav {
+  background: #15171c;
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navicon {
+  margin-left: 2rem;
+  font-size: 2rem;
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.sidebarnav {
+  background: #15171c;
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  /* left: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
+  transition: 350ms;
+  z-index: 10; */
+}
+
+.sidebarwrap {
+  width: 100%;
+}
+  .sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: auto; /* Set the width of the sidebar */
+    position: relative; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #ffffff; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+  }
+
+.btndiv {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+ 
+.linkText {
+    padding-left: 16px;
+}
+ 
+.linkTextClosed {
+    composes: linkText;
+    visibility: hidden;
+}
+ 
+.sideitem:hover {
+    background-color: #244f7d1c;
+
+}
+
+.dropdownbtn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  /* display: block; */
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+ 
+.menuBtn {
+    align-self: center;
+    align-self: flex-start; 
+    justify-self: flex-end;
+    color: #B2BAC2;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+.dropdown{
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
