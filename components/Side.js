@@ -34,7 +34,7 @@ const SidebarNav = styled.nav`
   }
   background: #f4b6c2;
 padding-top: 21px;
-  width: auto;
+
   grid-row: 2;
   grid-column: 1;
   @media (max-width: 1024px) {
