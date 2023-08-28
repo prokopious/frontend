@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import Link from 'next/link'
 import styled from 'styled-components';
 
-const SidebarLink = styled(Link)`
+const SidebarLink = styled.div`
   display: flex;
-  color: #e1e9fc;
+  color: white;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
@@ -12,10 +12,10 @@ const SidebarLink = styled(Link)`
   height: 60px;
   text-decoration: none;
   font-size: 18px;
-
+width: 100%;
   &:hover {
-    background: #252831;
-    border-left: 4px solid #632ce4;
+    background: white;
+    border-left: 4px solid white;
     cursor: pointer;
   }
 `;
@@ -25,7 +25,7 @@ const SidebarLabel = styled.span`
 `;
 
 const DropdownLink = styled(Link)`
-  background: #414757;
+  background: #eec9d2;
   height: 60px;
   padding-left: 3rem;
   display: flex;
@@ -33,9 +33,9 @@ const DropdownLink = styled(Link)`
   text-decoration: none;
   color: #f5f5f5;
   font-size: 18px;
-
+  width: 100%;
   &:hover {
-    background: #632ce4;
+    background: #ead5dc;
     cursor: pointer;
   }
 `;
@@ -45,25 +45,27 @@ const SideItem = ({ item }) => {
   const [subnav, setSubnav] = useState(false);
   const showSubnav = () => setSubnav(!subnav);
 
+  console.log(item)
+
   return (
     <>
-      <SidebarLink href="/" onClick={item.subNav && showSubnav}>
+      <SidebarLink onClick={item.posts && showSubnav}>
         <div>
           {item.icon}
-          <SidebarLabel>{item.title}</SidebarLabel>
+          <SidebarLabel>{item.name}</SidebarLabel>
         </div>
         <div>
-          {item.subNav && subnav
+          {/* {item.slug && subnav
             ? item.iconOpened
             : item.subNav
             ? item.iconClosed
-            : null}
+            : null} */}
         </div>
       </SidebarLink>
       {subnav &&
-        item.subNav.map((item, index) => {
+        item.posts.map((item, index) => {
           return (
-            <DropdownLink href='/' key={index}>
+            <DropdownLink href={'/blog/' + item.slug} key={index}>
               {item.icon}
               <SidebarLabel>{item.title}</SidebarLabel>
             </DropdownLink>

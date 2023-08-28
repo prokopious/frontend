@@ -32,8 +32,8 @@ const SidebarNav = styled.nav`
 @media (min-width: 1024px) {
     padding-top: 50px;
   }
-  background: #white;
-  width: 250px;
+  background: #f4b6c2;
+  width: auto;
   grid-row: 2;
   grid-column: 1;
   @media (max-width: 1024px) {
@@ -61,16 +61,8 @@ const Side = (data) => {
     return (
         <>
             <IconContext.Provider value={{ color: '#fff' }}>
-                {/* <Nav>
-                    <NavIcon href="/">
-                        <FaIcons.FaBars onClick={showSidebar} />
-                    </NavIcon>
-                </Nav> */}
                 <SidebarNav isOpen={isOpen}>
                     <SidebarWrap>
-                        {/* <NavIcon href="/">
-                            <AiIcons.AiOutlineClose onClick={showSidebar} />
-                        </NavIcon> */}
                         {data.data.map((item, index) => {
                             return <SideItem item={item} key={index} />;
                         })}

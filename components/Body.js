@@ -4,7 +4,7 @@ import {useBarContext} from '../context/bar'
 
 const Bod = styled.div`
 
-    background: silver;
+    background: white;
     display: grid;
     margin:0;
     grid-template-rows: 1fr 9fr;
@@ -12,11 +12,12 @@ const Bod = styled.div`
 
 
   @media (max-width: 1024px) {
-    background: yellow;
+    background: white;
     display: grid;
     margin:0;
+
     grid-template-rows: 1fr 9fr;
-    grid-template-columns: ${({ isOpen }) => (isOpen ? '250px auto' : '0px auto')};
+    grid-template-columns: ${({ isOpen }) => (isOpen ? '8fr 2fr' : '0px auto')};
   }
 `;
 
