@@ -1,7 +1,8 @@
 @import url(https://db.onlinewebfonts.com/c/5673da52c98bb6cb33ada5aaf649703e?family=Roboto+Regular+V1);
 
 .textbody {
-    padding: 40px;
+ 
+    padding: 54px;
     font-family: "Roboto Regular V1";
-    color: rgb(34, 35, 74);
+    color: #233953;
 }

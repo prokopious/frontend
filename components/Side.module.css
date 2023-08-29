@@ -19,7 +19,7 @@
     text-decoration: none;
   } */
 .nav {
-  background: #15171c;
+
   height: 80px;
   display: flex;
   justify-content: flex-start;
@@ -36,7 +36,7 @@
 }
 
 .sidebarnav {
-  background: #15171c;
+
   width: 250px;
   height: 100vh;
   display: flex;
@@ -58,7 +58,7 @@
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    background-color: #ffffff; /* Black */
+    background-color: #AE8057; /* Black */
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
   }

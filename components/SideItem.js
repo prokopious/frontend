@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const SidebarLink = styled.div`
   display: flex;
-  color: white;
+  color: #233953;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
@@ -12,10 +12,11 @@ const SidebarLink = styled.div`
   height: 60px;
   text-decoration: none;
   font-size: 18px;
+  font-weight: bold;
 // width: 100%;
   &:hover {
-    background: white;
-    border-left: 3px solid white;
+    background: #F1E7DA;
+    border-left: 3px solid gray;
     cursor: pointer;
   }
 `;
@@ -25,18 +26,20 @@ const SidebarLabel = styled.span`
 `;
 
 const DropdownLink = styled(Link)`
-  background: #eec9d2;
+  background: #F1E7DA;
   height: 60px;
+
   padding-left: 3rem;
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: #f5f5f5;
+  color: #233953;
   font-size: 18px;
   width: 100%;
   &:hover {
-    background: #ead5dc;
+    background: #F1E7DA;
     cursor: pointer;
+    border-left: 3px solid gray;
   }
 `;
 

@@ -31,7 +31,7 @@ export default function Header() {
                 <Link href="/" className={styles.link1}>
                     <Logo /> {active}
                     <span className={styles.name}>
-                        sakura
+                        loremipsum
                     </span>
                 </Link>
           

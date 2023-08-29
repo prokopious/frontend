@@ -10,7 +10,8 @@
   position: relative;
   align-items: center;
   justify-content: space-between;
-  background-color: #f6abb6;
+  background-color: #233953;
+  color: #F1E7DA;
 }
 
 .link1 {
@@ -33,7 +34,7 @@
   line-height: 1.75rem;
   font-weight: 700;
   letter-spacing: 0.025em;
-  color: #367ECA;
+  color: #F1E7DA;
   text-transform: uppercase;
 }
 
@@ -41,12 +42,13 @@
   display: inline-flex;
   padding: 0.75rem;
   outline-style: none;
-  color: #367ECA;
+  color: #F1E7DA;
   text-decoration: none;
   border: transparent;
   background-color: transparent;
   @media (min-width: 1024px) {
     display: none;
+    
   }
 }
 
@@ -59,7 +61,7 @@
   width: 100%;
 
   @media (min-width: 1024px) {
-
+    
     flex-grow: 1;
     width: auto;
   }
@@ -96,7 +98,7 @@
   width: 100%;
   font-size: calc(16px + .1vw);
   font-weight: 700;
-  color: #367ECA;
+  color: #F1E7DA;
 
   @media (min-width: 1024px) {
     display: inline-flex;

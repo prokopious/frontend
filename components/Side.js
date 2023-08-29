@@ -9,8 +9,9 @@ import SideItem from './SideItem'
 import { IconContext } from 'react-icons/lib';
 
 const Nav = styled.div`
-  background: #15171c;
+  background: #D3CDC4;
   height: 80px;
+  color: #233953;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -21,6 +22,7 @@ const NavIcon = styled(Link)`
     display:none;
   }
   margin-left: 2rem;
+  color: #233953;
   font-size: 2rem;
   height: 80px;
   display: flex;
@@ -32,13 +34,15 @@ const SidebarNav = styled.nav`
 @media (min-width: 1024px) {
     padding-top: 40px;
   }
-  background: #f4b6c2;
-padding-top: 21px;
-
+  background: #F1E7DA;
+padding-top: 0px;
+color: #233953;
+border-right: 1px solid black;
   grid-row: 2;
   grid-column: 1;
   @media (max-width: 1024px) {
     display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
+    padding-top: 40px;
   }
   height: 100%;
   display: flex;
