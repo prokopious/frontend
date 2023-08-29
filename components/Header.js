@@ -29,7 +29,7 @@ export default function Header() {
         <>
             <nav className={styles.flex}>
                 <Link href="/" className={styles.link1}>
-                    <Logo /> {active}
+                    {/* <Logo /> {active} */}
                     <span className={styles.name}>
                         loremipsum
                     </span>
