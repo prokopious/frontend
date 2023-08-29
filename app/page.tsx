@@ -17,12 +17,12 @@ export default async function Home() {
   const data = await getData()
 
   return (<div className="box">
-    <h3>This is the main page.</h3>
+    {/* <h3>This is the main page.</h3> */}
     <div className="pic">
-      {/* <img className="pic"
-        src="/bird3.jpg"
+      <img className="pic"
+        src="/bird5.png"
         alt="Picture of a bird"
-      /> */}
+      />
       </div>
   </div>)
 }
