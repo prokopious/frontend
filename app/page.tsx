@@ -1,5 +1,6 @@
 import Image from 'next/image'
 
+
 async function getData() {
   const res = await fetch('https://jsonplaceholder.typicode.com/todos/1')
   // The return value is *not* serialized

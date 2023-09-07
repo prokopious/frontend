@@ -1,7 +1,12 @@
+"use client"
 import client from '../../../client'
 import styles from './page.module.css'
+import AudioPlayer from 'react-h5-audio-player';
+import MusicPlayer from "../../../components/MusicPlayer"
 import imageUrlBuilder from '@sanity/image-url'
+import 'react-h5-audio-player/lib/styles.css';
 import { PortableText } from '@portabletext/react'
+
 
 function urlFor(source) {
   return imageUrlBuilder(client).image(source)
@@ -47,38 +52,30 @@ export default async function Page({ params }) {
 
   const post = await fetchData(params)
   console.log(post)
-  const {
-    title = 'Missing title',
-    name = 'Missing name',
-    categories,
-    authorImage,
-    body = []
-  } = post
+  // const {
+  //   title = 'Missing title',
+  //   name = 'Missing name',
+  //   categories,
+  //   authorImage,
+  //   body = []
+  // } = post
   return (
     <article className={styles.textbody}>
-      <h1>{title}</h1>
-      <span>By {name}</span>
+
+      {/* <h1>{title}</h1>
       {categories && (
         <ul>
           Posted in
           {categories.map(category => <li key={category}>{category}</li>)}
         </ul>
-      )}
-      {authorImage && (
-        <div>
-          <img
-            src={urlFor(authorImage)
-              .width(50)
-              .url()}
-            alt={`${name}'s picture`}
-          />
-        </div>
-      )}
-
-      <PortableText
+      )} */}
+      <div className={styles.musicBox}>
+        <MusicPlayer source="http://example.com/audio.mp3" />
+      </div>
+      {/* <PortableText
         value={body}
         components={ptComponents}
-      />
+      /> */}
     </article>
   )
 }
