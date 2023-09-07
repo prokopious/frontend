@@ -70,7 +70,7 @@ export default async function Page({ params }) {
         </ul>
       )} */}
       <div className={styles.musicBox}>
-        <MusicPlayer source="http://example.com/audio.mp3" />
+        <MusicPlayer source="http://example.com/https://res.cloudinary.com/dlhx5mdfm/video/upload/v1693861173/657354__matrixxx__action-run-n-jump-on-japanese-city-rooftops_ejqaf3.wav" />
       </div>
       {/* <PortableText
         value={body}
