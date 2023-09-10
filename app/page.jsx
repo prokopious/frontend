@@ -60,7 +60,7 @@ export default async function Home() {
 
   return (
     <>{JSON.stringify(contacts)}
-    {/* <button onClick={saveContact}>click me</button> */}
+   
     </>
     // <div className="box">
     //   {/* <h3>This is the main page.</h3> */}
