@@ -4,22 +4,14 @@ import { useState, useEffect } from "react"
 import styles from './Header.module.css'
 import Logo from './Logo'
 import { useBarContext } from "@/context/bar";
-
 import { useMediaQuery } from 'usehooks-ts'
-
 export default function Header() {
 
-
-
     const [active, setActive] = useState(false)
-
-    const matches = useMediaQuery('(min-width: 1024px)')
-    console.log(matches)
 
     const { isOpen, setIsOpen} = useBarContext();
     const showSidebar = () => setIsOpen(!isOpen);
 
-    // const isRowBased = useMediaQuery('(min-width: 800px)');
 
     const handleClick = () => {
         setIsOpen(!isOpen)

@@ -32,12 +32,16 @@ const NavIcon = styled(Link)`
 
 const SidebarNav = styled.nav`
 @media (min-width: 1024px) {
-    padding-top: 40px;
+    padding-top: 50px;
   }
-  background: #F1E7DA;
+  background: rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+
 padding-top: 0px;
+margin-top: 0px;
 color: #233953;
-border-right: 1px solid black;
+
   grid-row: 2;
   grid-column: 1;
   @media (max-width: 1024px) {
@@ -56,26 +60,27 @@ border-right: 1px solid black;
 
 const SidebarWrap = styled.div`
   width: 100%;
+  
 `;
 
 const Side = (data) => {
 
-    const { isOpen, setIsOpen } = useBarContext();
-    const showSidebar = () => setIsOpen(!isOpen);
+  const { isOpen, setIsOpen } = useBarContext();
+  const showSidebar = () => setIsOpen(!isOpen);
 
-    return (
-        <>
-            <IconContext.Provider value={{ color: '#fff' }}>
-                <SidebarNav isOpen={isOpen}>
-                    <SidebarWrap>
-                        {data.data.map((item, index) => {
-                            return <SideItem item={item} key={index} />;
-                        })}
-                    </SidebarWrap>
-                </SidebarNav>
-            </IconContext.Provider>
-        </>
-    );
+  return (
+    <>
+      <IconContext.Provider value={{ color: '#fff' }}>
+        <SidebarNav isOpen={isOpen}>
+          <SidebarWrap>
+            {data.data.map((item, index) => {
+              return <SideItem item={item} key={index} />;
+            })}
+          </SidebarWrap>
+        </SidebarNav>
+      </IconContext.Provider>
+    </>
+  );
 };
 
 export default Side;

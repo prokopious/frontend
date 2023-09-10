@@ -1,9 +1,10 @@
 .sidebarlink {
     display: flex;
-    color: #e1e9fc;
+    color: #e1e9fc00;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+ 
     list-style: none;
     height: 60px;
     text-decoration: none;
@@ -22,7 +23,7 @@
 }
 
 .dropdownlink {
-    background: #D3CDC4;
+    background: #d3cdc400;
     height: 60px;
     padding-left: 3rem;
     display: flex;

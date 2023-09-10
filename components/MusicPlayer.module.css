@@ -1,0 +1,71 @@
+.buton {
+    /* background-color: transparent; */
+    border: none;
+    width: 100%;
+    text-align: left;
+    background-color: transparent;
+    margin-bottom: 5px;
+    color: var(--text-dark);
+}
+
+
+.bBox {
+    width: 100%;
+
+    padding: 3px;
+    height: 25px;
+    padding-left: 5px;
+    border-radius: 3px;
+    background-color: rgba(0, 76, 147, 0.067);
+    /* background-color: var(--four); */
+    /* border-bottom: 1px solid rgba(209, 208, 208, 0.186); */
+}
+
+.bBox2 {
+    width: 100%;
+    height: 25px;
+    padding: 3px;
+
+    padding-left: 5px;
+    border-radius: 3px;
+    color: gray;
+    /* border-bottom: 1px solid rgba(209, 208, 208, 0.186); */
+    /* background-color: var(--four); */
+}
+
+.track {
+    font-weight: 700;
+    margin-bottom: 7px;
+    padding-left: 3px;
+    padding-top: 5px;
+    padding-bottom: 1px;
+
+}
+
+.player {
+    /* border: 1px solid silver; */
+    background: rgba(255, 255, 255, 0.15);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.075);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+
+.tracklist {
+    margin-bottom: 7px;
+    width: 100%;
+
+    border-radius: 3px;
+    /* background: rgba(255,255,255,0.15);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.075); */
+
+}
+
+.tracklist div:active {
+    background-color: rgb(151, 151, 151);
+}

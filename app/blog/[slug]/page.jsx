@@ -1,12 +1,10 @@
-"use client"
+
 import client from '../../../client'
 import styles from './page.module.css'
-import AudioPlayer from 'react-h5-audio-player';
+import VideoPlayer from "../../../components/VideoPlayer"
 import MusicPlayer from "../../../components/MusicPlayer"
 import imageUrlBuilder from '@sanity/image-url'
-import 'react-h5-audio-player/lib/styles.css';
 import { PortableText } from '@portabletext/react'
-
 
 function urlFor(source) {
   return imageUrlBuilder(client).image(source)
@@ -24,6 +22,8 @@ async function fetchData(params) {
   const { slug } = params
   const post = await client.fetch(`*[_type == "post" && slug.current == $slug][0]{
     title,
+    imageList,
+    audioList,
     "name": author->name,
     "authorImage": author->image,
     body
@@ -51,31 +51,33 @@ const ptComponents = {
 export default async function Page({ params }) {
 
   const post = await fetchData(params)
-  console.log(post)
-  // const {
-  //   title = 'Missing title',
-  //   name = 'Missing name',
-  //   categories,
-  //   authorImage,
-  //   body = []
-  // } = post
-  return (
-    <article className={styles.textbody}>
 
-      {/* <h1>{title}</h1>
-      {categories && (
-        <ul>
-          Posted in
-          {categories.map(category => <li key={category}>{category}</li>)}
-        </ul>
-      )} */}
-      <div className={styles.musicBox}>
-        <MusicPlayer source="http://example.com/https://res.cloudinary.com/dlhx5mdfm/video/upload/v1693861173/657354__matrixxx__action-run-n-jump-on-japanese-city-rooftops_ejqaf3.wav" />
+  const {
+    title = 'Missing title',
+    name = 'Missing name',
+    audioList,
+    imageList,
+    body = []
+  } = post
+
+  return (
+    <article id="scale-up-center" className={styles.textbody}>
+
+      <div className="scale-up-center">
+        <h1 className={styles.title}>{title}</h1>
       </div>
-      {/* <PortableText
+
+      {post.audioList != null &&
+        <div className={styles.musicBox}>
+          <MusicPlayer data={post.audioList} title={post.title} />
+        </div>
+      }
+      <div className={styles.portable}>
+      <PortableText
         value={body}
         components={ptComponents}
-      /> */}
+      />
+      </div>
     </article>
   )
 }

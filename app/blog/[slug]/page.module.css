@@ -1,12 +1,22 @@
 @import url(https://db.onlinewebfonts.com/c/5673da52c98bb6cb33ada5aaf649703e?family=Roboto+Regular+V1);
 
 .textbody {
- 
     padding: 54px;
-    font-family: "Roboto Regular V1";
+
     color: #233953;
 }
 
 .musicBox {
     width: 400px;
+}
+
+.title {
+    margin-bottom: 20px;
+    padding-left: 5px;
+    font-size: calc(25px + .7vw);
+}
+
+.portable {
+    font-family: var(--font-body);
+    padding-left: 5px;
 }

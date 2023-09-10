@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import { useBarContext } from '@/context/bar';
 
 const Cont = styled.div`
+
+font-family: var(--font-body);
+
 @media (min-width: 1024px) {
     grid-row: 2;
     grid-column: 2;

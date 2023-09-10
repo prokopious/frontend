@@ -1,30 +1,72 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
 @import url(https://db.onlinewebfonts.com/c/5673da52c98bb6cb33ada5aaf649703e?family=Roboto+Regular+V1);
+@import url(https://db.onlinewebfonts.com/c/73fedd912ba11f583a359ce4c2e742ed?family=Ninja+Naruto+V1);
+@import url(https://db.onlinewebfonts.com/c/2533430c91927d425a87845afcf925cf?family=NONA+SPECIAL);
+@import url(https://db.onlinewebfonts.com/c/49b13300202f25c085c731d216fab421?family=PT+Mono);
 
+:root {
+  --one: #000000;
+  --two-: #ED303C;
+  --three: #F5634A;
+  --four: #FF9C5B;
+  --five: #271f9fd8;
+
+  --text-dark: #222222;
+  --text-light: #e8e8e8;
+  --text-dark-highlight: #2e2e2e;
+  --text-light-highlight: #ffffff;
+
+  --app-shadow:11px 11px 39px #949494, -11px -11px 39px #ffffff;
+  --button-shadow:5px 5px 10px #b6a9a9, -5px -5px 10px #ffffff;
+  --image-shadow:11px 11px 22px #a4a4a4, -11px -11px 22px #ffffff;
+  --track-shadow:7px 7px 14px #b8b8b8, -5px -5px 14px #ffffff;
+
+  --font-navbar: "Anime Ace";
+  --font-sidebar: "Anime Ace";
+  --font-body: "Anime Ace";
+
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-
-  font-family: "Roboto Regular V1"
 }
 
 .pic {
   margin-top: 15px;
   width: 400px;
+
   @media (max-width: 1024px) {
     width: 300px;
   }
 }
 
 .box {
-padding: 59px;
-padding-left: 45px;
-color: #233953;
-font-family: "Roboto Regular V1"
+  padding: 59px;
+  padding-left: 45px;
+  color: #233953;
+  font-family: var(--font-body);
 }
 
 
@@ -44,7 +86,7 @@ html {}
   }
 } */
 
- /* .sidebar { 
+/* .sidebar { 
    grid-row: 2;
   grid-column: 1; 
 
@@ -64,7 +106,7 @@ h1 {
 .content {
   /* grid-row: 2;
   grid-column: 2; */
-  background-color: #F1E7DA;
+  background-color: var(--five);
   /* background: url("https://images.metmuseum.org/CRDImages/as/original/DP124460.jpg") no-repeat center center fixed;  */
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -77,4 +119,9 @@ h1 {
 
 h4 {
   font-size: 1.3em;
+}
+
+.scale-up-center {
+	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }

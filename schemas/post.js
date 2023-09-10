@@ -1,4 +1,5 @@
 import {defineField, defineType} from 'sanity'
+import {cloudinarySchemaPlugin} from 'sanity-plugin-cloudinary'
 
 export default defineType({
   name: 'post',
@@ -43,6 +44,20 @@ export default defineType({
       name: 'publishedAt',
       title: 'Published at',
       type: 'datetime',
+    }),
+    defineField({
+      type: "array",
+      name: "imageList",
+      title: "ImageList",
+      description: "Image assets from Cloudinary",
+      of: [{ type: "cloudinary.asset" }]
+    }),
+    defineField({
+      type: "array",
+      name: "audioList",
+      title: "AudioList",
+      description: "Audio assets from Cloudinary",
+      of: [{ type: "cloudinary.asset" }]
     }),
     defineField({
       name: 'body',
