@@ -34,10 +34,8 @@ const SidebarNav = styled.nav`
 @media (min-width: 1024px) {
     padding-top: 50px;
   }
-  background: rgba(255, 255, 255, 0.15);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
 
+border-right: .5px solid gray;
 padding-top: 0px;
 margin-top: 0px;
 color: #233953;
@@ -57,6 +55,28 @@ color: #233953;
   // transition: 350ms;
   z-index: 10;
 `;
+const SidebarLink = styled.div`
+  display: flex;
+  color: black;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  list-style: none;
+  height: 40px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+// width: 100%;
+  &:hover {
+    background: transparent;
+    border-left: 3px solid gray;
+    cursor: pointer;
+  }
+`;
+
+const SidebarLabel = styled.span`
+  margin-left: 16px;
+`;
 
 const SidebarWrap = styled.div`
   width: 100%;
@@ -73,6 +93,23 @@ const Side = (data) => {
       <IconContext.Provider value={{ color: '#fff' }}>
         <SidebarNav isOpen={isOpen}>
           <SidebarWrap>
+
+            <SidebarLink>
+              <Link href="/about">
+                <SidebarLabel>About</SidebarLabel>
+              </Link>
+            </SidebarLink>
+            <SidebarLink>
+              <Link href="/contact">
+                <SidebarLabel>Contact</SidebarLabel>
+              </Link>
+            </SidebarLink>
+            <SidebarLink>
+              <Link href="/graphic-arts">
+                <SidebarLabel>Graphic Design</SidebarLabel>
+              </Link>
+            </SidebarLink>
+
             {data.data.map((item, index) => {
               return <SideItem item={item} key={index} />;
             })}

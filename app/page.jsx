@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { PrismaClient } from '@prisma/client'
-
+import ContactForm from '../components/ContactForm'
 const prisma = new PrismaClient()
 
 const saveContact = async (contact) => {
@@ -59,8 +59,8 @@ export default async function Home() {
 
 
   return (
-    <>{JSON.stringify(contacts)}
-   
+    <>
+      <ContactForm />
     </>
     // <div className="box">
     //   {/* <h3>This is the main page.</h3> */}

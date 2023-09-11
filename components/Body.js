@@ -4,8 +4,8 @@ import {useBarContext} from '../context/bar'
 
 const Bod = styled.div`
 height: 100vh;
-background: rgb(63,94,251);
-background: linear-gradient(348deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+// background: rgb(63,94,251);
+background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 @media (min-width: 1024px) {
     display: grid;
     margin:0;
