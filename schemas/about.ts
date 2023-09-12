@@ -2,8 +2,8 @@ import {defineField, defineType} from 'sanity'
 import {cloudinarySchemaPlugin} from 'sanity-plugin-cloudinary'
 
 export default defineType({
-  name: 'graphic',
-  title: 'Graphic',
+  name: 'about',
+  title: 'About',
   type: 'document',
   fields: [
     defineField({

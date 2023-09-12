@@ -2,10 +2,13 @@
 import styled from 'styled-components';
 import {useBarContext} from '../context/bar'
 
+
 const Bod = styled.div`
-height: 100vh;
+height: 100%;
+min-height: 100vh;
 // background: rgb(63,94,251);
-background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+// background-image: linear-gradient(to bottom right, #FDFCFB, #E2D1C3);
+// background-image: url("../public/bamboo.jpg") no-repeat center center fixed; 
 @media (min-width: 1024px) {
     display: grid;
     margin:0;

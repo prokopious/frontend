@@ -1,6 +1,6 @@
 "use client"
 
-import {useState} from 'react';
+import { useState } from 'react';
 
 const useContactForm = () => {
   const [values, setValues] = useState({
@@ -11,6 +11,7 @@ const useContactForm = () => {
 
   const handleChange = (e) => {
     setValues(prevState => {
+      console.log(prevState)
       return {
         ...prevState,
         [e.target.id]: e.target.value,
@@ -18,7 +19,7 @@ const useContactForm = () => {
     });
   };
 
-  return {values, handleChange};
+  return { values, handleChange };
 };
 
 export default useContactForm;

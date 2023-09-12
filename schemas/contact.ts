@@ -12,27 +12,15 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
-      options: {
-        source: 'title',
-        maxLength: 96,
-      },
-    }),
-    defineField({
         name: 'subtitle',
         title: 'Subtitle',
         type: 'string',
       }),
-    defineField({
-      name: 'mainImage',
-      title: 'Main image',
-      type: 'cloudinary.asset',
-      options: {
-        hotspot: true,
-      },
-    }),
+      defineField({
+        name: 'mainImage',
+        title: 'Main image',
+        type: 'cloudinary.asset',
+      }),
     defineField({
         name: 'body',
         title: 'Body',

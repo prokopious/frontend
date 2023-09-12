@@ -1,11 +1,11 @@
-import client from '../client'
+import client from '../../client'
 import styles from './page.module.css'
 import { PortableText } from '@portabletext/react'
-import Picture from '../components/Picture'
+import Picture from '../../components/Picture'
 
 
 async function fetchData() {
-    const post = await client.fetch(`*[_type == "home"][0]{
+    const post = await client.fetch(`*[_type == "about"][0]{
     title,
     subtitle,
     mainImage,
@@ -45,7 +45,7 @@ export default async function Page() {
 
     return (
       <div className="mainbox">  <article id="scale-up-center" className={styles.textbody}>
-           
+            {JSON.stringify(contentBlocks.imageList)}
             <div className="scale-up-center">
                 <h1 className={styles.title}>{title}</h1>
             </div>

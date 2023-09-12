@@ -1,11 +1,13 @@
-import client from '../client'
+
+import client from '../../client'
 import styles from './page.module.css'
 import { PortableText } from '@portabletext/react'
-import Picture from '../components/Picture'
+import MusicPlayer from "../../components/MusicPlayer"
+import VideoPlayer from '../../components/VideoPlayer'
 
 
 async function fetchData() {
-    const post = await client.fetch(`*[_type == "home"][0]{
+    const post = await client.fetch(`*[_type == "social"][0]{
     title,
     subtitle,
     mainImage,
@@ -44,32 +46,41 @@ export default async function Page() {
     } = post
 
     return (
-      <div className="mainbox">  <article id="scale-up-center" className={styles.textbody}>
-           
+        <div className="mainbox">
+        <article id="scale-up-center" className={styles.textbody}>
+            {JSON.stringify(contentBlocks.imageList)}
             <div className="scale-up-center">
                 <h1 className={styles.title}>{title}</h1>
             </div>
             <h4 className={styles.subtitle}>{subtitle}</h4>
-            {mainImage && <div><Picture source={mainImage.url} /></div>}
+            {mainImage && <div><img width="300px" src={mainImage.url} /></div>}
             <div className={styles.portable}>
-                            <PortableText
-                                value={body}
-                                components={ptComponents}
-                            />
-                        </div>
+                <PortableText
+                    value={body}
+                    components={ptComponents}
+                />
+            </div>
 
             {contentBlocks &&
 
                 contentBlocks.map((block) => {
+                  
                     const { title, imageList = [], assetType, body } = block;
+                    console.log(imageList)
                     return <>
                         <h1 className={styles.subtitle}>{title}</h1>
                         {assetType == 'image' &&
                             imageList.map((n) => {
-                                return <><div><Picture source={n.url} /></div></>
+                                return <><div><img src={n.url} /></div></>
                             })
-                            // <div><img src={asset.url} /></div>
-
+                        }
+                        {assetType == 'audio' &&
+                        <div><MusicPlayer data={imageList} title={title} /></div>
+                        }
+                         {assetType == 'video' &&
+                            imageList.map((n) => {
+                                return <><div><VideoPlayer url={n.url} /></div></>
+                            })
                         }
                         <div className={styles.portable}>
                             <PortableText
@@ -84,4 +95,3 @@ export default async function Page() {
         </article></div>
     )
 }
-

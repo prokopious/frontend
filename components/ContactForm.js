@@ -14,41 +14,36 @@ const ContactForm = () => {
     return (
         <div className={styles.contact}>
             <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor='email'>Email</label>
-                </div>
-                <div>
+                {/* <div className={styles.send}><b>or..</b></div> */}
+                <div className={styles.email}>
                     <input
                         required
-                        id='email'
+                        id={styles.email}
+                        placeholder="your email address.."
                         value={values.email}
                         onChange={handleChange}
                         type='email'
                     />
                 </div>
                 <div>
-                    <label htmlFor='subject'>Subject</label>
-                </div>
-                <div>
                     <input
-                        required
-                        id='subject'
+        
+                        id={styles.subject}
                         value={values.subject}
+                        placeholder="subject.."
                         onChange={handleChange}
                         type='text'
                     /></div>
                 <div>
-                    <label htmlFor='message'>Message</label>
-                </div>
-                <div>
                     <textarea
                         required
                         value={values.message}
+                        placeholder="message.."
                         onChange={handleChange}
-                        id='message'
+                        id={styles.message}
                         rows={8}
                     /></div>
-                <button type='submit' value='Submit'>Send</button>
+                <button className={styles.bu} type='submit' value='Submit'>Send</button>
             </form>
         </div>
     );

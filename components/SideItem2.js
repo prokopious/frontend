@@ -10,7 +10,6 @@ const SidebarLink = styled.div`
   padding: 20px;
   list-style: none;
   height: 40px;
-  text-decoration: none;
   font-size: 18px;
   font-weight: bold;
 // width: 100%;
@@ -33,7 +32,6 @@ const DropdownLink = styled(Link)`
 
   display: flex;
   align-items: center;
-  text-decoration: none;
   color: black;
   font-size: 18px;
   width: 100%;

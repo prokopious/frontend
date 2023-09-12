@@ -1,7 +1,7 @@
 @import url(https://db.onlinewebfonts.com/c/5673da52c98bb6cb33ada5aaf649703e?family=Roboto+Regular+V1);
 
 .textbody {
-    padding: 54px;
+
 
     color: #233953;
 }
@@ -12,11 +12,18 @@
 
 .title {
     margin-bottom: 20px;
-    padding-left: 5px;
+    padding-left: 0px;
     font-size: calc(25px + .7vw);
+}
+
+.subtitle {
+    margin-bottom: 20px;
 }
 
 .portable {
     font-family: var(--font-body);
     padding-left: 5px;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }

@@ -4,12 +4,12 @@ import React from 'react'
 import styles from './VideoPlayer.module.css'
 
 
-export default function VideoPlayer() {
+export default function VideoPlayer({url}) {
 
     return (
-        <div className={styles.videoPlayer}>
-            <ReactPlayer width="100%" url='https://www.youtube.com/watch?v=LXb3EKWsInQ' />
-        </div>
+      
+            <ReactPlayer controls="true" light="true" url={url} />
+       
     )
 
 }

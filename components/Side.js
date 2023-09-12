@@ -15,6 +15,7 @@ const Nav = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
 `;
 
 const NavIcon = styled(Link)`
@@ -28,23 +29,25 @@ const NavIcon = styled(Link)`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  
 `;
 
 const SidebarNav = styled.nav`
 @media (min-width: 1024px) {
-    padding-top: 50px;
+    padding-top: calc(25px + 3vw);
   }
 
 border-right: .5px solid gray;
-padding-top: 0px;
+padding-top: 25px;
 margin-top: 0px;
 color: #233953;
+// background-color: yellow;
 
   grid-row: 2;
   grid-column: 1;
   @media (max-width: 1024px) {
     display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
-    padding-top: 40px;
+    padding-top: calc(25px + 3vw);
   }
   height: 100%;
   display: flex;
@@ -61,21 +64,24 @@ const SidebarLink = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  font-family: var(--font-sidebar);
   list-style: none;
   height: 40px;
-  text-decoration: none;
   font-size: 18px;
   font-weight: bold;
+ 
 // width: 100%;
   &:hover {
     background: transparent;
     border-left: 3px solid gray;
     cursor: pointer;
   }
+
 `;
 
 const SidebarLabel = styled.span`
   margin-left: 16px;
+  text-decoration: none;
 `;
 
 const SidebarWrap = styled.div`
@@ -100,19 +106,39 @@ const Side = (data) => {
               </Link>
             </SidebarLink>
             <SidebarLink>
+              <Link href="/graphic-design">
+                <SidebarLabel>Graphic Design</SidebarLabel>
+              </Link>
+            </SidebarLink>
+            <SidebarLink>
+              <Link href="/audio-video">
+                <SidebarLabel>Audio and Video</SidebarLabel>
+              </Link>
+            </SidebarLink>
+            <SidebarLink>
+              <Link href="/social">
+                <SidebarLabel>Social Media Management</SidebarLabel>
+              </Link>
+            </SidebarLink>
+            <SidebarLink>
+              <Link href="/production">
+                <SidebarLabel>Production Services</SidebarLabel>
+              </Link>
+            </SidebarLink>
+            <SidebarLink>
+              <Link href="/virtual">
+                <SidebarLabel>Virtual Assistance</SidebarLabel>
+              </Link>
+            </SidebarLink>
+            <SidebarLink>
               <Link href="/contact">
                 <SidebarLabel>Contact</SidebarLabel>
               </Link>
             </SidebarLink>
-            <SidebarLink>
-              <Link href="/graphic-arts">
-                <SidebarLabel>Graphic Design</SidebarLabel>
-              </Link>
-            </SidebarLink>
 
-            {data.data.map((item, index) => {
+            {/* {data.data.map((item, index) => {
               return <SideItem item={item} key={index} />;
-            })}
+            })} */}
           </SidebarWrap>
         </SidebarNav>
       </IconContext.Provider>

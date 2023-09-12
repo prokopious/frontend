@@ -1,5 +1,88 @@
 
 
-.contact {
-    padding: 50px;
+/* #contact {
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.499);
+    border-radius: 4px;
+    height: 15px;
+    border: none;
+    @media(min-width: 700px){
+        width: 500px;
+    }
+} */
+.send {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
+
+#email {
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.499);
+    border-radius: 4px;
+    height: 35px;
+    padding: 3px;
+    padding-left: 8px;
+    z-index: 10;
+    margin-bottom: 10px;
+    border: none;
+        background-color: rgba(210, 210, 210, 0.476);
+        @media(min-width: 700px){
+            width: 500px;
+        }
+}
+
+#subject {
+    width: 400px;
+    background-color: rgba(210, 210, 210, 0.476);
+    border-radius: 4px;
+    height: 35px;
+    margin-bottom: 10px;
+    padding: 3px;
+    padding-left: 8px;
+    border: none;
+
+    @media(min-width: 700px){
+        width: 500px;
+    }
+}
+
+#message {
+    width: 400px;
+    padding-left: 8px;
+    border-radius: 4px;
+    padding: 3px;
+    margin-bottom: 10px;
+    padding: 3px;
+    padding-left: 8px;
+    height: 300px;
+    border: none;
+    background-color: rgba(210, 210, 210, 0.476);
+    @media(min-width: 700px){
+        width: 500px;
+    }
+}
+
+.bu {
+    background-color: rgba(210, 210, 210, 0.476);
+    border-radius: 4px;
+    padding: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: none;
+}
+
+#email::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(107, 107, 107, 0.598);
+    opacity: 1; /* Firefox */
+  }
+
+  #message::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(107, 107, 107, 0.598);
+    opacity: 1; /* Firefox */
+  }
+  
+#subject::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(107, 107, 107, 0.598);
+    opacity: 1; /* Firefox */
+  }

@@ -12,11 +12,11 @@
   .menu {
     padding-top: 30px;
     padding-left: 10px;
-    text-decoration: none;
+
   }
 
   .menuitem {
-    text-decoration: none;
+
   } */
 .nav {
 
@@ -24,7 +24,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  
+
 }
 
 .navicon {
@@ -47,6 +47,7 @@
   /* left: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
   transition: 350ms;
   z-index: 10; */
+  text-decoration: none;
 }
 
 .sidebarwrap {
@@ -61,18 +62,21 @@
     left: 0;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
+    text-decoration: none;
+    
   }
 
 .btndiv {
   padding: 6px 8px 6px 16px;
-  text-decoration: none;
   font-size: 25px;
   color: #000000;
   display: block;
+  text-decoration: none;
 }
  
 .linkText {
     padding-left: 16px;
+    text-decoration: none;
 }
  
 .linkTextClosed {
@@ -86,7 +90,6 @@
 
 .dropdownbtn {
   padding: 6px 8px 6px 16px;
-  text-decoration: none;
   font-size: 20px;
   color: #818181;
   /* display: block; */
@@ -97,6 +100,7 @@
   text-align: left;
   cursor: pointer;
   outline: none;
+  text-decoration: none;
  
 }
  
@@ -109,7 +113,7 @@
     border: none;
     cursor: pointer;
     padding-left: 20px;
-    
+    text-decoration: none;
 }
 
 .fa-caret-down {
@@ -121,5 +125,5 @@
   display: none;
   background-color: #262626;
   padding-left: 8px;
-  
+  text-decoration: none;
 }

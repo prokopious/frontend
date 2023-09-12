@@ -1,14 +1,16 @@
-
 import client from '../../client'
 import styles from './page.module.css'
 import { PortableText } from '@portabletext/react'
+import Picture from '../../components/Picture'
 
 
 async function fetchData() {
     const post = await client.fetch(`*[_type == "graphic"][0]{
     title,
     subtitle,
-    contentBlocks
+    mainImage,
+    contentBlocks,
+    body,
   }`)
     return post
 }
@@ -36,26 +38,39 @@ export default async function Page() {
     const {
         contentBlocks = [],
         title,
+        mainImage,
         subtitle,
+        body = [],
     } = post
 
     return (
-        <article id="scale-up-center" className={styles.textbody}>
-
+      <div className="mainbox">  <article id="scale-up-center" className={styles.textbody}>
+            {JSON.stringify(contentBlocks.imageList)}
             <div className="scale-up-center">
                 <h1 className={styles.title}>{title}</h1>
             </div>
-            <h4>{subtitle}</h4>
+            <h4 className={styles.subtitle}>{subtitle}</h4>
+            {mainImage && <div><Picture source={mainImage.url} /></div>}
+            <div className={styles.portable}>
+                            <PortableText
+                                value={body}
+                                components={ptComponents}
+                            />
+                        </div>
 
             {contentBlocks &&
 
                 contentBlocks.map((block) => {
-                    const { title, subtitle, assetType, asset, body } = block;
+                    const { title, imageList = [], assetType, body } = block;
                     return <>
-                        <h1>{title}</h1>
-                        {assetType &&
+                        <h1 className={styles.subtitle}>{title}</h1>
+                        {assetType == 'image' &&
+                            imageList.map((n) => {
+                                return <><div><Picture source={n.url} /></div></>
+                            })
+                            // <div><img src={asset.url} /></div>
 
-                            <div><img src={asset.url} /></div>}
+                        }
                         <div className={styles.portable}>
                             <PortableText
                                 value={body}
@@ -66,7 +81,7 @@ export default async function Page() {
                     </>
                 })
             }
-        </article>
+        </article></div>
     )
 }
 

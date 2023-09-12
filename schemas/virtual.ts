@@ -2,8 +2,8 @@ import {defineField, defineType} from 'sanity'
 import {cloudinarySchemaPlugin} from 'sanity-plugin-cloudinary'
 
 export default defineType({
-  name: 'graphic',
-  title: 'Graphic',
+  name: 'virtual',
+  title: 'Virtual Assistance',
   type: 'document',
   fields: [
     defineField({
@@ -16,11 +16,11 @@ export default defineType({
         title: 'Subtitle',
         type: 'string',
       }),
-      defineField({
-        name: 'mainImage',
-        title: 'Main image',
-        type: 'cloudinary.asset',
-      }),
+    defineField({
+      name: 'mainImage',
+      title: 'Main image',
+      type: 'cloudinary.asset',
+    }),
     defineField({
         name: 'body',
         title: 'Body',
